@@ -1,0 +1,171 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+a{
+    text-decoration: none;
+}
+.nav a {
+    color: white; /* Sets the text color to white */
+    text-decoration: none; /* Removes underline from links */
+    transition: color 0.3s; /* Smooth transition for color change on hover */
+}
+
+.nav a:hover {
+    color: #ffffff; /* Lightens the color on hover for a visual effect */
+}
+.nav{
+    background-color: #e64919ad;
+    display: flex; 
+    width: 100%;
+    height: 140px;
+    gap: 600px;
+    position: sticky;
+    z-index: 100;
+   }
+   #nav1{
+       display: flex;
+       justify-content: flex-start;
+       align-items: center;
+   }
+   #nav1 i{
+       margin-left: 10px;
+       padding: 60px 10px;
+       font-size: 40px;
+       color: white;
+   }
+   
+   #nav2 {
+       display: flex;
+       gap: 60px;
+       font-size: 20px;
+       justify-content: center;
+       align-items: center;
+       
+   }
+   #nav2 h3{
+       color: white;
+       text-transform: uppercase;
+       font-weight: 500;
+   }
+   #nav3{
+       display: flex;
+       justify-content: flex-end;
+       align-items: center;
+       gap: 40px;
+   }
+   #nav3 i{
+       font-size: 30px;
+       color: white;
+   }
+   
+button{
+    border: none;
+background-color: #fff;
+cursor: pointer;
+    
+}
+i{
+    text-decoration: none;
+    font-size: 30px;
+}
+#heading{
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 40px;
+    margin: 20px 20px;
+    text-align: center;
+}
+.menu-container {
+    padding: 20px;
+    background-color: #f8f8f8;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+#gap{
+    margin-top: 100px;
+}
+.dish-card {
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    padding: 30px; /* Increased padding */
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s, transform 0.3s;
+    height: 450px; /* Increased height from 400px to 450px */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transform: scale(1); /* Default scale */
+}
+
+.dish-card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05); /* Scaled up slightly */
+}
+
+.dish-image {
+    width: 100%;
+    height: 250px; /* Increased image height */
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.dish-title {
+    font-size: 1.5em; /* Slightly larger text */
+    margin: 10px 0;
+}
+
+.dish-description {
+    color: #666666;
+    margin-bottom: 10px;
+    flex-grow: 1;
+}
+
+.dish-price {
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+.order-button {
+    padding: 15px 30px; /* Increased button size */
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+
+.order-button:hover {
+    background-color: #e64a19;
+}
+
+@media (max-width: 1024px) {
+    .menu-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+}

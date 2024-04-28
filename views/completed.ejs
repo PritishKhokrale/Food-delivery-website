@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Completed</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/completed.css">
+    <script src="/javascripts/completed.js"></script> 
+</head>
+<body>
+    <header>
+        <h1>Welcome to Foodio</h1>
+        <nav>
+            <ul class="navbar">
+                <li><a href="/cancelled" class="scroll-link">Cancelled Orders</a></li>
+                <li><a href="/restaurant" class="scroll-link">Orders</a></li>
+                <li><a href="/completed" class="scroll-link">Completed Orders</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="main">
+        <h1>Completed Orders</h1>
+        <% if (order && order.length> 0) { %>
+            <ol>
+                <% const pendingOrders=order.filter(o=> o.message_status === 'accepted');
+                    if (pendingOrders.length > 0) {
+                    pendingOrders.forEach(message => {
+                    %>
+                    <li>
+                        <p>Customer Username: <%= message.customer_username %>
+                        </p>
+                        <p>Address: <%= message.Address %>
+                        </p>
+                        <p>Contact: <%= message.contact %>
+                        </p>
+                        <p>Order: <%= message.order %>
+                        </p>
+                        <p>Payment: <%= message.payment %>
+                        </p>
+                       <p>
+                         Order Delivered
+                       </p>
+                    </li>
+                    <% }); } else { %>
+                        <p>No Orders Completed</p>
+                        <% } %>
+            </ol>
+            <% } else { %>
+                <p>No Orders Completed</p>
+                <% } %>
+    </div>
+
+    <footer>
+        <p id="footer">&copy; 2024 FOODIO. All rights reserved.</p>
+    </footer>
+</body>
+</html>

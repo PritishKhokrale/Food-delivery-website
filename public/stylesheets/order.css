@@ -1,0 +1,188 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('/images/leaf.jpg'); /* Set the path to your background image */
+    background-size: cover; /* Ensures the background covers the entire viewport */
+    background-position: center; /* Centers the background image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-decoration: none;
+}
+.nav {
+    display: flex; 
+    width: 100%;
+    height: 80px; /* Reduced height for a more typical navbar look */
+    background: rgba(128, 128, 128, 0.411); /* Semi-transparent gray background */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    padding: 0 20px; /* Padding on the sides */
+    align-items: center; /* Center items vertically within the navbar */
+    justify-content: space-between; /* Distribute the space between nav elements */
+}
+.nav a {
+    color: white; /* Sets the text color to white */
+    text-decoration: none; /* Removes underline from links */
+    transition: color 0.3s; /* Smooth transition for color change on hover */
+}
+
+.nav a:hover {
+    color: #ffffff; /* Lightens the color on hover for a visual effect */
+}
+
+
+#nav1, #nav2, #nav3 {
+    display: flex;
+    align-items: center; /* Center items vertically */
+}
+
+#nav1 i, #nav3 i {
+    font-size: 30px; /* Adjusting icon size for a balanced look */
+    color: white;
+    padding: 10px;
+}
+
+#nav2 {
+    display: flex;
+    gap: 40px; /* Adjust gap for elements within #nav2 */
+    font-size: 20px;
+}
+
+#nav2 h3 {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+#nav3 {
+    gap: 20px; /* Closer gap for elements on the far right */
+}
+
+.container {
+    display: flex;
+    justify-content: space-around; /* Provides space between the boxes */
+    width: 85%; /* Adjusts width of the container */
+    max-width: 1200px;
+    background: transparent; /* Transparent background for the container */
+    margin-top: 20px; /* Top margin for breathing space */
+    padding: 20px;
+}
+
+.restaurant, .main {
+    flex-basis: 48%; /* Adjusts each box to take nearly half of the container's width */
+    margin: 15px; /* Margins to ensure boxes don't touch */
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Adds shadow for depth */
+    backdrop-filter: blur(5px); /* Blurs the background behind the boxes */
+}
+
+h1 {
+    font-size: 24px; /* Larger font size for restaurant names */
+    color: #333;
+    margin-bottom: 15px;
+}
+
+ol {
+    padding-left: 20px;
+}
+
+li {
+    font-size: 18px; /* Larger font for readability */
+    line-height: 1.6;
+    color: #555;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px;
+}
+
+.forminside {
+    margin-bottom: 10px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50; /* Green background for the submit button */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+.response {
+
+    flex-basis: 48%; /* Adjusts each box to take nearly half of the container's width */
+    margin: 15px; /* Margins to ensure boxes don't touch */
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Adds shadow for depth */
+    backdrop-filter: blur(5px);
+    
+}
+.restaurant {
+    flex-basis: 48%; /* Nearly half the width of the container */
+    margin: 15px; /* Margins for spacing */
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    backdrop-filter: blur(5px);
+    max-height: 300px; /* Maximum height to trigger scrollbar */
+    overflow-y: auto; /* Vertical scrolling */
+}
+
+.response {
+    flex-basis: 48%; /* Nearly half the width of the container */
+    margin: 15px; /* Margins for spacing */
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    backdrop-filter: blur(5px); /* Background blur */
+    max-height: 300px; /* Maximum height to trigger scrollbar */
+    overflow-y: auto; /* Vertical scrolling */
+}
+
+/* Optional: Styling the scrollbar */
+.restaurant::-webkit-scrollbar, .response::-webkit-scrollbar {
+    width: 8px; /* Scrollbar width */
+}
+
+.restaurant::-webkit-scrollbar-track, .response::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Scrollbar track color */
+}
+
+.restaurant::-webkit-scrollbar-thumb, .response::-webkit-scrollbar-thumb {
+    background: #888; /* Scrollbar thumb color */
+    border-radius: 4px; /* Rounded corners */
+}
+
+.restaurant::-webkit-scrollbar-thumb:hover, .response::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Darker on hover */
+}

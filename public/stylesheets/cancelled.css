@@ -1,0 +1,143 @@
+/* style.css */
+
+body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+    margin: 0;
+    padding: 0;
+    background-image: url('/images/leaf.jpg'); /* Set the path to your background image */
+    background-size: cover; /* Ensures the background covers the entire viewport */
+    background-position: center; /* Centers the background image */
+}
+
+header {
+    background-color: #333333b9;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+  
+}
+header h1{
+    color: white;
+}
+
+nav {
+    
+    margin-top: 10px;
+}
+
+.navbar {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+    font-size: 20px;
+}
+
+.navbar a:hover {
+    background-color: #ffffff;
+}
+
+section {
+    padding: 40px;
+    text-align: center;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    bottom: 0;
+    width: 100%;
+}
+
+button {
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #beb8b8;
+}
+.main {
+    max-width: 800px; /* Constrain width */
+    margin: 30px auto; /* Margin-top for space, auto to center */
+    background-color: #ffffff; /* White background */
+    padding: 20px; /* Padding within the main container */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+/* Style the main heading */
+h1 {
+    font-size: 2em; /* Larger font size */
+    font-weight: bold; /* Bold font */
+    color: #333; /* Dark text color */
+    text-align: center; /* Center the heading */
+    margin-bottom: 10px; /* Space below the heading */
+}
+
+/* Style the ordered list */
+ol {
+    list-style-type: decimal; /* Default ordered list style */
+    padding-left: 20px; /* Space before list items */
+    margin-top: 5px; /* Space above the list */
+}
+
+/* Style individual list items */
+li {
+    margin-bottom: 20px; /* Space between list items */
+    padding: 15px; /* Padding within each list item */
+    background-color: #e0e0e0; /* Light grey background for list items */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition on hover */
+}
+
+/* Hover effect on list items */
+li:hover {
+    background-color: #d4d4d4; /* Slightly darker grey on hover */
+}
+
+/* Style links inside list items */
+a {
+    text-decoration: none; /* No underline on links */
+    color: #1e88e5; /* Blue color for links */
+    font-weight: bold; /* Bold font */
+}
+
+/* Style for the "no reply" message */
+p {
+    color: #000000; 
+    font-weight: bold; 
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: 20px; 
+}
+#footer{
+    color: #ffffff; 
+    font-weight: bold; 
+    font-size: 1.5em; 
+    text-align: center; 
+    margin-top: 20px;
+}

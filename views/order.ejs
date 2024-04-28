@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Page</title>
+    <link rel="stylesheet" href="/stylesheets/order.css">
+</head>
+<body>
+    <div class="nav">
+        <div id="nav1"><i class="ri-menu-3-line"></i></div>
+        <div id="nav2">
+            <a href="/home"><h3>Home</h3></a>
+            <a href="/menu"><h3>Menu</h3></a>
+            <a href="#"><h3>Service</h3></a>
+            <a href="/categories"><h3>Categories</h3></a>
+        </div>
+        <div id="nav3">
+            <a href="#"><i class="ri-search-line"></i></a>
+            <a href="/cart"><i class="ri-shopping-bag-line"></i></a>
+            <a href="/login"><i class="ri-user-2-line"></i></a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="restaurant">
+            <h1>List of Restaurants:</h1>
+            <% if (restaurants_usernames && restaurants_usernames.length > 0) { %>
+                <ol type="1">
+                    <% restaurants_usernames.forEach(username => { %>
+                        <li class="list"><%= username %></li>
+                    <% }); %>
+                </ol>
+            <% } else { %>
+                <p>Restaurants are not available</p>
+            <% } %>
+        </div>
+
+        <div class="main">
+            <form class="form" action="/sendmessage" method="post">
+                <div class="forminside">
+                    <label class="text">Enter Username of Restaurant</label>
+                    <input class="input" type="text" name="restaurant_username" placeholder="Username of Restaurant">
+                </div>
+
+                <div class="forminside">
+                    <label class="text">Enter Order name</label>
+                    <input class="input" type="text" name="order" placeholder="Order name">
+                </div>
+
+                <div class="forminside">
+                    <label class="text">Enter Address</label>
+                    <input class="input" type="text" name="Address" placeholder="Address">
+                </div>
+
+                <div class="forminside">
+                    <label class="text">Enter Contact no.</label>
+                    <input class="input" type="text" name="contact" placeholder="Contact no.">
+                </div>
+                
+                <div class="forminside">
+                    <label for="user-type">Payment:</label>
+                    <select name="payment" id="user-type">
+                        <option value="cash">Cash on Delivery</option>
+                    </select>
+                </div>
+
+                <input type="submit" value="Place Order">
+            </form>
+        </div>
+
+        <div class="response">
+            <h1>Received Orders</h1>
+            <% if (order && order.length > 0) { %>
+                <ol>
+                    <% order.forEach(function(message) { %>
+                        <li>
+                            <p>Order: <%= message.order %></p>
+                            <p>Order Status: <%= message.message_status %></p>
+                        </li>
+                    <% }); %>
+                </ol>
+            <% } else { %>
+                <h2>Restaurant Response</h2>
+                <p>Waiting for response...</p>
+            <% } %>
+        </div>
+    </div>
+</body>
+</html>
